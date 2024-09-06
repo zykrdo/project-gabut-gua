@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGDO RACING</title>
+    <!-- Link Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">DIGDO RACING</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1>Selamat Datang di Toko Knalpot</h1>
+      <p>Tempat terbaik untuk knalpot kendaraan berkualitas</p>
+      <a href="#products" class="btn btn-primary">Lihat Produk</a>
+    </div>
+
+    <!-- Produk Section -->
+    <section id="products" class="container my-5">
+      <h2 class="text-center mb-4">Produk Kami</h2>
+      <div class="row">
+        <!-- Produk 1: Knalpot Sport -->
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="bugatti_unveils_chiron_lultime_8k-1920x1080.jpg"
+              class="card-img-top"
+              alt="Knalpot Sport"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Knalpot Sport</h5>
+              <p class="card-text">
+                Knalpot sport berkualitas tinggi untuk performa maksimal.
+              </p>
+              <a href="#" class="btn btn-primary">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 2: Knalpot Racing -->
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="wallpaperflare.com_wallpaper(1).jpg"
+              class="card-img-top"
+              alt="Knalpot Racing"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Knalpot Racing</h5>
+              <p class="card-text">
+                Knalpot racing untuk kecepatan dan akselerasi optimal.
+              </p>
+              <a href="#" class="btn btn-primary">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 3: Knalpot Custom -->
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="wallpaperflare.com_wallpaper.jpg"
+              class="card-img-top"
+              alt="Knalpot Custom"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Knalpot Custom</h5>
+              <p class="card-text">
+                Knalpot custom untuk gaya unik dan performa.
+              </p>
+              <a href="#" class="btn btn-primary">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="contact" class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Hubungi Kami</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Alamat Toko</h4>
+            <p>Jl. Raya Otomotif No. 123, Jakarta</p>
+            <p>Telepon: +62 812-3456-7890</p>
+            <p>Email: info@tokoknalpot.com</p>
+          </div>
+          <div class="col-md-6">
+            <h4>Formulir Kontak</h4>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Masukkan nama Anda"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Masukkan email Anda"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Pesan</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="3"
+                  placeholder="Tulis pesan Anda"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Toko Knalpot. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <!-- Link Bootstrap JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tambahkan script JS di bagian bawah file HTML sebelum tag </body> -->
+    <script>
+      // Function untuk validasi form
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Mencegah form submit secara default
+
+        // Mengambil nilai dari inputan form
+        var name = document.getElementById("name").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var message = document.getElementById("message").value.trim();
+
+        // Memeriksa apakah semua input sudah terisi
+        if (name === "" || email === "" || message === "") {
+          alert("Semua kolom wajib diisi.");
+          return; // Jika ada yang kosong, batalkan proses submit
+        }
+
+        // Validasi email sederhana
+        var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+          alert("Masukkan alamat email yang valid.");
+          return; // Jika email tidak valid, batalkan proses submit
+        }
+
+        // Jika semua validasi berhasil
+        alert("Pesan Anda telah berhasil dikirim!");
+
+        // Reset form setelah berhasil submit
+        document.querySelector("form").reset();
+      });
+    </script>
+  </body>
+</html>

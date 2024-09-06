@@ -1,0 +1,196 @@
+/* Mengatur margin dan padding default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 1rem;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-image: url("pexels-alex-qian-1180283-4914160.jpg"); /* Ganti dengan gambar knalpot */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 5rem 2rem;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Overlay untuk gambar background */
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Warna hitam transparan agar teks lebih jelas */
+  z-index: 1;
+}
+
+.jumbotron h1,
+.jumbotron p {
+  z-index: 2; /* Supaya teks berada di atas overlay */
+}
+
+.jumbotron h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #dddddd;
+}
+
+.jumbotron .btn {
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.jumbotron .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 2.5rem;
+  }
+
+  .jumbotron p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Produk Section */
+#products {
+  padding: 3rem 0;
+}
+
+#products h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Kontak Section */
+#contact {
+  padding: 3rem 0;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#contact p {
+  font-size: 1.1rem;
+}
+
+#contact .form-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#contact .form-control {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+#contact .btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Footer */
+footer {
+  padding: 1.5rem 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 2rem;
+  }
+
+  .jumbotron p {
+    font-size: 1rem;
+  }
+
+  #products h2,
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  .navbar-toggler {
+    margin-right: 1rem;
+  }
+}
